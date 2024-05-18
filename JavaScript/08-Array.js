@@ -30,27 +30,27 @@ console.log(arr);
 
 for (let i = 0; i < arr.length; i++)
 {
-    console.log(arr[ i ]);
+  console.log(arr[ i ]);
 }
 
 arr.forEach((x,index) => {
-    console.log(index,x);
+  console.log(index,x);
 })
 
 for (let x of arr)
 {
-    console.log(x);
+  console.log(x);
 }
 
 const findElement = (arr,target) => {
-    for (let x of arr)
+  for (let x of arr)
+  {
+    if (x === target)
     {
-        if (x === target)
-        {
-            return true
-        }
+      return true
     }
-    return false
+  }
+  return false
 }
 console.log(findElement(arr,"Hello"));
 console.log(findElement(arr,"hello"));
@@ -59,14 +59,14 @@ console.log(arr.includes("Hello"));
 
 
 const findElementIndex = (arr,target) => {
-    for (let i = 0; i < arr.length; i++)
+  for (let i = 0; i < arr.length; i++)
+  {
+    if (arr[ i ] === target)
     {
-        if (arr[ i ] === target)
-        {
-            return i
-        }
+      return i
     }
-    return false
+  }
+  return false
 }
 console.log(findElementIndex(arr,"Hello"));
 
@@ -116,20 +116,20 @@ console.log(newArr2);
 // Question 3 : How you check if two arrays are equal
 
 const isArrayEqual = (arr1,arr2) => {
-    //  if (arr1.length !== arr2.length)
-    //  {
-    //      return false
-    //  }
-    //  for (let i = 0; i < arr1.length; i++)
-    //  {
-    //      if (arr1[ i ] !== arr2[ i ])
-    //      {
-    //          return false
-    //      }
-    //  }
-    //  return true
+  //  if (arr1.length !== arr2.length)
+  //  {
+  //      return false
+  //  }
+  //  for (let i = 0; i < arr1.length; i++)
+  //  {
+  //      if (arr1[ i ] !== arr2[ i ])
+  //      {
+  //          return false
+  //      }
+  //  }
+  //  return true
 
-    return arr1.length === arr2.length && arr1.every((ele,i) => arr1[ i ] === arr2[ i ])
+  return arr1.length === arr2.length && arr1.every((ele,i) => arr1[ i ] === arr2[ i ])
 }
 
 console.log(isArrayEqual([ 1,2,3,4 ],[ 1,2,3,4 ]));
